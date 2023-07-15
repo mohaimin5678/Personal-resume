@@ -18,6 +18,7 @@
     --success: #1ecab8;
     --danger: #f1646c;
     --dark-blue: #28365f;
+    --linkedin: #0077B5;
 }
 
 .insta {
@@ -199,6 +200,10 @@ section.profile .right ul.socials li:nth-child(2) a {
 
 section.profile .right ul.socials li:nth-child(3) a {
     background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+}
+
+section.profile .right ul.socials li:nth-child(4) a {
+    background: var(--linkedin);
 }
 
 /* ............................2nd section................................ */
