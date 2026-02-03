@@ -10,6 +10,17 @@
     <link rel="shorcut icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
     <title>Personal Resume</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "JjXuWZ-QBYGcB_A_S",
+        });
+    })();
+    </script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -105,7 +116,7 @@
                     </p>
                     <p>
                         <span>Spoken Languages</span>
-                        <span>English - Bangla</span>
+                        <span>Bangla, English</span>
                     </p>
                     <p>
                         <span>Nationality</span>
@@ -140,7 +151,7 @@
                                 <p>Higher School Education</p>
                             </div>
                             <div class="item">
-                                <p>2019 - 2023</p>
+                                <p>2020 - 2023</p>
                                 <p class="center">BSc</p>
                                 <p>Bachelor of Science in CSE</p>
                             </div>
@@ -150,7 +161,7 @@
                 <div class="right">
                     <div class="skills_wrapper">
                         <div class="skill-box">
-                            <h4>HTML & CSS</h4>
+                            <h4>HTML &amp; CSS</h4>
                             <div class="progress__wrap">
                                 <span data-percent="90" class="progress__bar">
                                     <span class="tooltip">90%</span>
@@ -187,7 +198,7 @@
         </section>
 
         <section class="work">
-            <h1 class="section_heading">My Works & Review</h1>
+            <h1 class="section_heading">My Works &amp; Review</h1>
             <div class="wrapper">
                 <div class="slider_wrapper">
                     <div class="icon_wrap">
@@ -277,21 +288,25 @@
                     <form action="">
                         <div class="form_group">
                             <div>
-                                <label for="">Name</label>
-                                <input type="text">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
                             </div>
                             <div>
-                                <label for="">Email</label>
-                                <input type="email">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
                             </div>
                         </div>
                         <div class="form_group textarea_wrapper">
                             <div>
-                                <label for="">Message</label>
-                                <textarea name="" id="" cols="30" rows="5"></textarea>
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" cols="30" rows="5" required></textarea>
                             </div>
                         </div>
-                        <button type="submit">Submit Now</button>
+                        <button type="button" onclick="sendMail()">Submit Now</button>
                     </form>
                 </div>
             </div>
@@ -308,6 +323,7 @@
     <script src="./plugins/isotope.js"></script>
     <script src="./plugins/magnify.js"></script>
     <script src="./js/app.js"></script>
+    
 </body>
 
 </html>
